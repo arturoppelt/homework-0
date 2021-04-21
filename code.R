@@ -33,3 +33,12 @@ table <- data.frame(date =as_datetime(movielens$timestamp),
 table <- data.frame(table(table$hour))
 table %>% arrange(cols = Freq)
 
+#question 6
+install.packages("gutenbergr")
+library(gutenbergr)
+data("gutenberg_metadata")
+gutenberg_works(author == "Austen, Jane")
+gutenberg_download(1342)                                  
+install.packages("tidytext")
+library(tidytext)                                  
+words <- 
